@@ -4,6 +4,19 @@ import { Request, Response } from "express";
 export class UserController {
     private userService: UserService;
     constructor() { this.userService = new UserService() }
+    public login = async (req: Request, res: Response): Promise<any> => {
+        try {
+            const { userName, password } = req.body;
+            const { data, error } = await this.userService.login({ userName, password });
+            if (error) {
+                return res.status(400).json({ message: error });
+            }
+            return res.status(201).json({ message: i18n.__('messages.success.authen.loginSuccess'), token: data });
+        } catch (error) {
+            return res.status(500).json({ message: i18n.__('messages.error.internalError') })
+        }
+
+    };
     public createUser = async (req: Request, res: Response): Promise<any> => {
         try {
             const { userName, email, password } = req.body;

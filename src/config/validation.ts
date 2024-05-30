@@ -1,7 +1,7 @@
 // src/config/validation.ts
 export const ValidationConfig = {
     userName: {
-        minLength: 6,
+        minLength: 5,
         maxLength: 18,
     },
     password: {

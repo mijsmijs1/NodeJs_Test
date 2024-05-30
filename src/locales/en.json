@@ -19,6 +19,9 @@
 				"updated": "User updated successfully",
 				"found": "Successfully found user by id",
 				"deleted": "Successfully deleted user by id"
+			},
+			"authen": {
+				"loginSuccess": "Login successful"
 			}
 		},
 		"error": {
@@ -27,8 +30,13 @@
 				"emailExists": "Email already exists",
 				"notFound": "User not found"
 			},
+			"authen": {
+				"incorrectPassword": "Incorrect password",
+				"accountNotFound": "Account not found in the system",
+				"invalidToken": "Invalid Token"
+			},
 			"validationError": "Validation error",
-			"databaseError": "Database error during user creation",
+			"databaseError": "Database error",
 			"internalError": "Internal Server Error",
 			"updateDataRequired": "Update Data Required"
 		}
