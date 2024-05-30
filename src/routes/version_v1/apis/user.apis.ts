@@ -9,5 +9,6 @@ const userController = new UserController()
 Router.post('/create', validationMiddleware(CreateUserDTO), userController.createUser)
 Router.get('/findById/:id', userController.getUserById)
 Router.patch('/update/:id', validationMiddleware(UpdateUserDTO), userController.update)
+Router.delete('/delete/:id', userController.deleteById)
 
 export default Router;
