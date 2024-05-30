@@ -64,4 +64,19 @@ export class UserService {
             return { error: i18n.__('messages.error.databaseError') };
         }
     }
+    async deleteById(id: number) {
+        try {
+            const user = await this.userRepository.findOneBy({ id })
+            if (!user) {
+                throw { message: i18n.__('messages.error.user.notFound') }
+            }
+            await this.userRepository.delete({ id })
+            return { data: true };
+        } catch (err: any) {
+            if (err.message) {
+                return { error: err.message };
+            }
+            return { error: i18n.__('messages.error.databaseError') };
+        }
+    }
 }

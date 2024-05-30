@@ -17,7 +17,8 @@
 			"user": {
 				"created": "New user created successfully",
 				"updated": "User updated successfully",
-				"found": "Successfully found user by id"
+				"found": "Successfully found user by id",
+				"deleted": "Successfully deleted user by id"
 			}
 		},
 		"error": {
