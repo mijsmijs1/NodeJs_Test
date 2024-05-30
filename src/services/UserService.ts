@@ -25,5 +25,18 @@ export class UserService {
             return { error: i18n.__('messages.error.databaseError') };
         }
     }
-
+    async getUserById(id: number) {
+        try {
+            const user = await this.userRepository.findOneBy({ id })
+            if (!user) {
+                throw { message: i18n.__('messages.error.user.notFound') }
+            }
+            return { data: user };
+        } catch (err: any) {
+            if (err.message) {
+                return { error: err.message };
+            }
+            return { error: i18n.__('messages.error.databaseError') };
+        }
+    }
 }

@@ -17,5 +17,20 @@ export class UserController {
         }
 
     };
+    public getUserById = async (req: Request, res: Response): Promise<any> => {
+        try {
+            const userId = Number(req.params.id)
+            const { data, error } = await this.userService.getUserById(userId);
+            if (error) {
+                if (error.includes('not found')) {
+                    return res.status(404).json({ message: error });
+                }
+                return res.status(400).json({ message: error });
+            }
+            return res.status(201).json({ message: i18n.__('messages.success.user.found'), data });
+        } catch (error) {
+            return res.status(500).json({ message: i18n.__('messages.error.internalError') })
+        }
 
+    };
 }

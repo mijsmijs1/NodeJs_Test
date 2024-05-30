@@ -5,6 +5,7 @@ import { CreateUserDTO } from "../../../controllers/dtos/users_dto/createUser.dt
 const Router = express.Router()
 const userController = new UserController()
 
+Router.get('/findById/:id', userController.getUserById)
 Router.post('/create', validationMiddleware(CreateUserDTO), userController.createUser)
 
 export default Router;
