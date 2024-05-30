@@ -15,7 +15,8 @@
 	"messages": {
 		"success": {
 			"user": {
-				"created": "New user created successfully"
+				"created": "New user created successfully",
+				"found": "Successfully found user by id"
 			}
 		},
 		"error": {
