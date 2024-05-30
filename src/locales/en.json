@@ -1,0 +1,32 @@
+{
+	"validation": {
+		"userName": {
+			"minLength": "Username must be at least {min} characters long",
+			"maxLength": "Username must be at most {max} characters long"
+		},
+		"email": {
+			"valid": "Email must be valid"
+		},
+		"password": {
+			"minLength": "Password must be at least {min} characters long",
+			"maxLength": "Password must be at most {max} characters long"
+		}
+	},
+	"messages": {
+		"success": {
+			"user": {
+				"created": "New user created successfully"
+			}
+		},
+		"error": {
+			"user": {
+				"userNameExists": "Username already exists",
+				"emailExists": "Email already exists",
+				"notFound": "User not found"
+			},
+			"validationError": "Validation error",
+			"databaseError": "Database error during user creation",
+			"internalError": "Internal Server Error"
+		}
+	}
+}
