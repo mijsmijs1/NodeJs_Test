@@ -16,6 +16,7 @@
 		"success": {
 			"user": {
 				"created": "New user created successfully",
+				"updated": "User updated successfully",
 				"found": "Successfully found user by id"
 			}
 		},
@@ -27,7 +28,8 @@
 			},
 			"validationError": "Validation error",
 			"databaseError": "Database error during user creation",
-			"internalError": "Internal Server Error"
+			"internalError": "Internal Server Error",
+			"updateDataRequired": "Update Data Required"
 		}
 	}
 }
